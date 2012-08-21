@@ -1,4 +1,17 @@
 <h1>Notes</h1>
+<%= link_to 'Add Note', new_note_path %>
+
+  <% if @note.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@note.errors.count, "error") %> prohibited
+        this post from being saved:</h2>
+    <ul>
+    <% @note.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
 
 <ul>
 	<% for note in @notes %>

@@ -9,6 +9,17 @@ describe "Notes" do
     	page.should have_content 'Pokemons'
     	#save_and_open_page
     end
+
+    it "should create new notes" do
+    	visit edit_notes_path
+    	#page.should have_selector('link','New Note')
+    	fill_in 'note_title', :with => '1'
+    	fill_in 'note_text', :with => 'Pokemons'
+    	click_button 'Add Note'
+    	current_path.should == notes_path
+    	page.should have_content 'Pokemons'
+    	save_and_open_page
+    end
   end
 
 end
