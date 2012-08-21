@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
-gem 'sqlite3'
+
+group :development do
+  gem 'sqlite3' # use SQLite only in development and testing
+end
+
+group :production do
+  gem 'pg' # use PostgreSQL in production (Heroku)
+end
 
 group :test, :development do
 	gem 'rspec-rails'
@@ -9,10 +16,6 @@ group :test, :development do
 	gem 'launchy'
 	gem 'guard-rspec'
 	gem 'growl'
-end
-
-group :production do
-  gem 'pg' # use PostgreSQL in production (Heroku)
 end
 
 
