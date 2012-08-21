@@ -1,2 +1,13 @@
-<h1>Notes#index</h1>
-<p>Testing... Find me in app/views/notes/index.html.erb</p>
+<h1>Notes</h1>
+
+<ul>
+	<% for note in @notes %>
+		<li>
+			<a href="#">
+				<h2><%= note.title %></h2>
+				<p><%= note.text %></p>
+			</a>
+		</li>
+	<% end %>
+</ul>
+
