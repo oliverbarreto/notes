@@ -18,7 +18,7 @@
 	  background:#666;
 	  color:#fff;
 	}
-	h2,p{
+	h2, p{
 	  margin:0;
 	  padding:0;
 	  font-size:100%;
@@ -31,16 +31,16 @@
 	  overflow:hidden;
 	  padding:1em;
 	}
-	ul li a{
-	  margin:0;
+	ul li a {
+	  margin: 2em;	
 	  padding:0;
 	  text-decoration:none;
 	  color:#000;
 	  background:#fffc73;
 	  /* creates a block with 10em x 10em */
 	  display:block;
-	  height:10em;
-	  width:10em;
+	  height:15em;
+	  width:15em;
 	  padding:1em;
 	  
 	  /* Box Shadow to create the shadow effect for Firefox, WebKit & Opera */  
@@ -64,7 +64,7 @@
 	  -moz-transform:rotate(4deg);  
 	  position:relative;  
 	  top:5px; 
-	  background:#e5399e;
+	  /*background:#e5399e;*/
 		}
 	ul li:nth-child(3n) a{
 	  -o-transform:rotate(-3deg);  
@@ -72,7 +72,7 @@
 	  -moz-transform:rotate(-3deg);  
 	  position:relative;  
 	  top:-5px;  
-	  background:#ccf;
+	  /*background:#ccf;*/
 	}
 	ul li:nth-child(5n) a{  
 	  -o-transform:rotate(5deg);  
@@ -80,7 +80,7 @@
 	  -moz-transform:rotate(5deg);  
 	  position:relative;  
 	  top:-10px;  
-	  background:#aef26d;
+	  /*background:#aef26d;*/
 	}  
 	ul li a:hover, ul li a:focus {  
 	  /* Transform to create a smooth shadow & zoom effect on focus and hover over on the notes */
@@ -94,6 +94,20 @@
 	  position:relative;  
 	  z-index:5; /* brings the focused note to front */ 
 	}  
+	.color_yellow {
+		background:#fffc73;
+	}
+	.color_pink {
+		background:#e5399e;
+	}
+	.color_blue {
+		background:#ccf;
+	}
+	.color_green {
+		background:#aef26d;
+	}
+
+
 	ul li{
 	  margin:1em;
 	  float:left;

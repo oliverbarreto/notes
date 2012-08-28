@@ -1,5 +1,8 @@
-<h1>New Note</h1>
+<h1>Edit Note</h1>
+
 <%= link_to 'Notes', notes_path %>
+| <%= link_to 'Delete', @note, :confirm => 'Are you sure?',
+                        :method => :delete %> 
 <%= form_for @note do |f| %>
   <% if @note.errors.any? %>
   <div id="errorExplanation">
@@ -14,10 +17,10 @@
   <% end %>
 
 	<ul>
-		<li class="note">
+		<li class="note", "color_pink">
 			<p>
 				<%= f.label :color %>
-				<%= f.text_field :color, :placeholder => "yellow" %>
+				<%= f.text_field :color, :placeholder => "blue" %>
 			</p>
 			<p>
 				<%= f.label :title %>
@@ -29,7 +32,7 @@
 			</p>
 			<hr />
 			<p>
-				<%= f.submit "Add Note", class:"btn btn-large btn-success" %>
+				<%= f.submit "Edit Note", class:"btn btn-large btn-success" %>
 			</p>
 		</li>
 			

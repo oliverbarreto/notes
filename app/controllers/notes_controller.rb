@@ -21,4 +21,34 @@ class NotesController < ApplicationController
   	end
   end
 
+  def show
+    @note = Note.find(params[:id])
+  end
+
+
+  def edit
+    @note = Note.find(params[:id])
+  end
+
+  def update
+    # render :text => params.inspect
+
+    @note = Note.find(params[:id])
+    if @note.update_attributes(params[:note])
+      # Handle Valid update
+      flash[:success] = "Note Updated"
+      #render notes_path
+      redirect_to notes_path, :notice => 'Post was successfully updated.'
+    else
+      render 'edit', :error => 'note was not successfully updated'
+    end
+  end
+
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+    redirect_to notes_path
+    
+  end
+
 end
