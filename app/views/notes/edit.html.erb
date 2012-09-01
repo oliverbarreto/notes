@@ -1,8 +1,9 @@
 <h1>Edit Note</h1>
-
 <%= link_to 'Notes', notes_path %>
 | <%= link_to 'Delete', @note, :confirm => 'Are you sure?',
                         :method => :delete %> 
+<hr />
+
 <%= form_for @note do |f| %>
   <% if @note.errors.any? %>
   <div id="errorExplanation">

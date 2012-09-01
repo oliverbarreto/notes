@@ -1,28 +1,29 @@
 <h1>Notes</h1>
 <%= link_to 'Add Note', new_note_path %>
+<hr />
 
-  <% if @note.errors.any? %>
-  <div id="errorExplanation">
-    <h2><%= pluralize(@note.errors.count, "error") %> prohibited
-        this post from being saved:</h2>
-    <ul>
-    <% @note.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
+<% if @note.errors.any? %>
+<div id="errorExplanation">
+  <h2><%= pluralize(@note.errors.count, "error") %> prohibited
+      this post from being saved:</h2>
+  <ul>
+  <% @note.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
   <% end %>
+  </ul>
+</div>
+<% end %>
 
-<ul>
-	<% for note in @notes %>
+<ul id="notes" data-update-url="<%= sort_notes_url %>">
+<% for note in @notes %>
 <!-- :class => 'color_pink') -->    
-    <%= content_tag_for(:li, note) do %>
-      <a href="<%= note_path(note)%>" class="color_<%= note.color.downcase %>">
+  <%= content_tag_for(:li, note) do %>
+    <a href="<%= note_path(note)%>" class="color_<%= note.color.downcase %>">
 
-        <h2><%= note.title %></h2>
-        <p><%= note.text %></p>
-      </a>
-    <% end %>
+      <h2><%= note.title %></h2>
+      <p><%= note.text %></p>
+    </a>
   <% end %>
+<% end %>
 </ul>
 

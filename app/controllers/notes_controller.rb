@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   def index
-  	@notes = Note.all
+  	@notes = Note.order("position")
   	@note = Note.new
   end
 
@@ -48,7 +48,15 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     @note.destroy
     redirect_to notes_path
-    
   end
+
+
+  def sort
+    params[:note].each_with_index do |id, index|
+      Note.update_all({position: index+1}, {id: id})
+    end
+    render nothing: true
+  end
+
 
 end
