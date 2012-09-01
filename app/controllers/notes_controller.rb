@@ -56,6 +56,7 @@ class NotesController < ApplicationController
       Note.update_all({position: index+1}, {id: id})
     end
     render nothing: true
+    #redirect_to notes_path
   end
 
 

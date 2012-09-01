@@ -18,11 +18,13 @@
 <% for note in @notes %>
 <!-- :class => 'color_pink') -->    
   <%= content_tag_for(:li, note) do %>
-    <a href="<%= note_path(note)%>" class="color_<%= note.color.downcase %>">
+    <div  class="note_class color_<%= note.color.downcase %>">
+      <a href="<%= note_path(note)%>">
 
-      <h2><%= note.title %></h2>
-      <p><%= note.text %></p>
-    </a>
+        <h2><%= note.position %></h2>
+        <p><%= note.text %></p>
+      </a>
+    </div>
   <% end %>
 <% end %>
 </ul>
