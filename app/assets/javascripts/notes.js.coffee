@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
 	$('#notes').sortable
-		handle: '.handle'
+		#handle: '.handle'
 		update: -> 
 			$.post($(this).data('update-url'), $(this).sortable('serialize'))

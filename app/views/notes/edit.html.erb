@@ -17,25 +17,34 @@
   </div>
   <% end %>
 
-	<ul>
-		<li class="note", "color_pink">
-			<p>
-				<%= f.label :color %>
-				<%= f.text_field :color, :placeholder => "blue" %>
-			</p>
-			<p>
-				<%= f.label :title %>
-				<%= f.text_field :title, :placeholder => "the note's title goes here", autofocus:"true" %>
-			</p>
-			<p>
-				<%= f.label :text %>
-				<%= f.text_field :text, :placeholder => "your note goes here" %>
-			</p>
-			<hr />
-			<p>
-				<%= f.submit "Edit Note", class:"btn btn-large btn-success" %>
-			</p>
-		</li>
-			
+	<ul id="notes">
+		<li>
+			<div  class="note_class color_<%= @note.color.downcase %> single_note">
+		      	<header>
+		        	<span class="handle">
+		          	<%= link_to 'x', @note,  :confirm => 'Are you sure?', 
+		                                  :method => :delete %> 
+		        	</span>
+		<!--         <span class="handle">[move]</span>
+		 -->      
+		      	</header>
+			    <p>
+					<%= f.label :color %>
+					<%= f.text_field :color, :placeholder => "blue",  autofocus:"true" %>
+				</p>
+				<p>
+					<%= f.label :title %>
+					<%= f.text_field :title, :placeholder => "the note's title goes here" %>
+				</p>
+				<p>
+					<%= f.label :text %>
+					<%= f.text_area :text, :placeholder => "your note goes here" %>
+				</p>
+				<hr />
+				<p>
+					<%= f.submit "Edit Note", class:"btn btn-large btn-success" %>
+				</p>
+			</div>
+		</li>			
 	</ul>
 <% end %>

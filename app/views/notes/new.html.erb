@@ -15,25 +15,25 @@
   </div>
   <% end %>
 
-	<ul>
-		<li class="note">
+	<ul id="notes">
+		<li>
+			<div  class="note_class color_<%= @note.color.downcase %> single_note">
 			<p>
 				<%= f.label :color %>
-				<%= f.text_field :color, :placeholder => "yellow" %>
+				<%= f.text_field :color, :placeholder => "yellow", autofocus:"true" %>
 			</p>
 			<p>
 				<%= f.label :title %>
-				<%= f.text_field :title, :placeholder => "the note's title goes here", autofocus:"true" %>
+				<%= f.text_field :title, :placeholder => "the note's title goes here" %>
 			</p>
 			<p>
 				<%= f.label :text %>
-				<%= f.text_field :text, :placeholder => "your note goes here" %>
+				<%= f.text_area :text, :placeholder => "your note goes here" %>
 			</p>
 			<hr />
 			<p>
 				<%= f.submit "Add Note", class:"btn btn-large btn-success" %>
 			</p>
-		</li>
-			
+		</li>			
 	</ul>
 <% end %>

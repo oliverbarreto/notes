@@ -1,7 +1,6 @@
 <h1>Notes</h1>
 <%= link_to 'Add Note', new_note_path %>
 |  <%= link_to 'Save List', notes_path %>
-
 <hr />
 
 <% if @note.errors.any? %>
@@ -18,7 +17,6 @@
 
 <ul id="notes" data-update-url="<%= sort_notes_url %>">
 <% for note in @notes %>
-<!-- :class => 'color_pink') -->    
   <%= content_tag_for(:li, note) do %>
     <div  class="note_class color_<%= note.color.downcase %>">
       <header>
@@ -26,13 +24,13 @@
           <%= link_to 'x', note,  :confirm => 'Are you sure?', 
                                   :method => :delete %> 
         </span>
-        <span class="handle">[move]</span>
-      
+<!--         <span class="handle">[move]</span>
+ -->      
       </header>
 
       <a href="<%= edit_note_path(note) %>">
 <!--       <a href="<%= note_path(note)%>">
- -->        <h2><%= note.position %></h2>
+ -->        <p><%= note.position %></p>
         <p><%= note.text %></p>
       </a>
     </div>

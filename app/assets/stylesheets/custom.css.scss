@@ -1,15 +1,12 @@
-	body{
+	body {
 	  margin:0;
 	  padding:0;
-	  font-family:arial,sans-serif;
+	  font-family:"Reenie Beanie",arial,sans-serif;  
 	  font-size:100%;
 	  margin:3em;
 	  background:#3d9ad1;
 	  /*color:#fff;*/
-	  color:white;
-	  	a:link    {color:#250672;}
-		a:visited {color:#250672;}
-	/* body, a:visited {color:#ff9640;} */
+	  color:#250672;
 
 	}
 
@@ -19,28 +16,72 @@
 	  font-size:100%;
 	  font-weight:normal;
 	}
+
 	ul,li {
 	  list-style:none;
 	}
+
 	ul {
 	  overflow:hidden;
 	  padding:1em;
 	}
+
+	ul li{
+	  margin:1em;
+	  float:left;
+	}
+
 	ul li a {
 	  margin: 2em;	
 	  padding:0;
 	  text-decoration:none;
-	  color:#000;
+	  /*color:#000;*/
 	  /*background:#fffc73;*/
 	}
 
+	ul li h2{  
+	  font-size:120%;  
+	  font-weight:bold;  
+	  padding-bottom:10px;  
+	}  
+
+	ul li p{  
+	  margin:0;
+	  padding:0;
+	  font-family:"Reenie Beanie",arial,sans-serif;  
+	  font-size:200%;  
+	}  
+
+	.note_class header .handle a {
+		color: black;
+		font-size: 25px;
+		font-weight: bold;
+
+	}
+	.note_class p {
+		color: white;
+	}
+
+	.note_class a p{
+	  color:#250672;
+	}
+
 	#notes .handle {
-		font-size: 12px;
-		color: #ff9640;
-		cursor: move;
+		font-size: 2em;
+		text-align: right;
+/*		color: #ff0000;
+*/		cursor: move;
 		float: right;
 		
 	}
+
+	.handle a {
+		font-size: 1em;
+		text-align: right;
+
+	}
+
+
 	.note_class {
 	  /* creates a block with 10em x 10em */
 	  display:block;
@@ -63,6 +104,40 @@
 	  -moz-transition:-moz-transform .15s linear;  
 	  -o-transition:-o-transform .15s linear;  
 	  -webkit-transition:-webkit-transform .15s linear;  
+	}
+
+	.single_note {
+		display:block;
+	  	height:32em;
+	  	width:30em;
+	  	font-size:12px;
+	  	font-family:"Reenie Beanie",arial,sans-serif;  
+	  	font-weight: bold;
+/*		color:#250672;
+*/
+		/* Box Shadow to create the shadow effect for Firefox, WebKit & Opera */  
+	  	-moz-box-shadow:25px 25px 27px rgba(33,33,33,.7);
+	  	-webkit-box-shadow: 25px 25px 27px rgba(33,33,33,.7);  
+	  	box-shadow: 25px 25px 27px rgba(33,33,33,.7); 
+
+	}
+
+	#note_title  {
+	    width:15em;
+	}
+
+	#note_text  {
+	    width:15em;
+	    height: 6em;
+	}
+
+	input, select, textarea {
+		border:none;
+	  	font-family:"Reenie Beanie",arial,sans-serif;  
+     	font-size:  100%;
+     	font-weight: bold;
+     	color:#250672;
+		background:transparent;
 	}
 
 	ul li:nth-child(even) div {
@@ -101,6 +176,7 @@
 	  position:relative;  
 	  z-index:5; /* brings the focused note to front */ 
 	}  
+
 	.color_yellow {
 		background:#fffc73;
 	}
@@ -115,19 +191,3 @@
 	}
 
 
-	ul li{
-	  margin:1em;
-	  float:left;
-	}
-
-	ul li h2{  
-	  font-size:120%;  
-	  font-weight:bold;  
-	  padding-bottom:10px;  
-	}  
-	ul li p{  
-	  margin:0;
-	  padding:0;
-	  font-family:"Reenie Beanie",arial,sans-serif;  
-	  font-size:200%;  
-	}  
