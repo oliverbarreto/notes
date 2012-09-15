@@ -10,11 +10,23 @@
 
 	}
 
-	h2, p{
+	a:link {
+		color: white;
+		text-decoration: none;
+		font-size: 20px;
+	}
+
+	a:hover {
+	  color:#FF8C00;
+	}
+
+	h1, h2{
 	  margin:0;
 	  padding:0;
-	  font-size:100%;
+	  font-size:5em;
 	  font-weight:normal;
+	  color:#FF8C00;
+	  /*font-weight: bold;*/
 	}
 
 	ul,li {
@@ -49,7 +61,7 @@
 	  margin:0;
 	  padding:0;
 	  font-family:"Reenie Beanie",arial,sans-serif;  
-	  font-size:200%;  
+	  font-size:160%;  
 	}  
 
 	.note_class header .handle a {
@@ -58,6 +70,7 @@
 		font-weight: bold;
 
 	}
+
 	.note_class p {
 		color: white;
 	}
@@ -70,8 +83,8 @@
 		font-size: 2em;
 		text-align: right;
 /*		color: #ff0000;
-*/		cursor: move;
-		float: right;
+		cursor: move;
+*/		float: right;
 		
 	}
 
@@ -140,15 +153,16 @@
 		background:transparent;
 	}
 
-	ul li:nth-child(even) div {
+	ul li:nth-child(even) {
 	  -o-transform:rotate(4deg);  
 	  -webkit-transform:rotate(4deg);  
 	  -moz-transform:rotate(4deg);  
 	  position:relative;  
 	  top:5px; 
 	  /*background:#e5399e;*/
-		}
-	ul li:nth-child(3n) div {
+	}
+
+	ul li:nth-child(3n)  {
 	  -o-transform:rotate(-3deg);  
 	  -webkit-transform:rotate(-3deg);  
 	  -moz-transform:rotate(-3deg);  
@@ -156,7 +170,8 @@
 	  top:-5px;  
 	  /*background:#ccf;*/
 	}
-	ul li:nth-child(5n) div {  
+	
+	ul li:nth-child(5n)  {  
 	  -o-transform:rotate(5deg);  
 	  -webkit-transform:rotate(5deg);  
 	  -moz-transform:rotate(5deg);  
@@ -164,7 +179,8 @@
 	  top:-10px;  
 	  /*background:#aef26d;*/
 	}  
-	ul li div:hover, ul li div:focus {  
+	
+	li .note_class:hover, li .note-class:focus {  
 	  /* Transform to create a smooth shadow & zoom effect on focus and hover over on the notes */
 	  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);  
 	  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);  
@@ -180,9 +196,11 @@
 	.color_yellow {
 		background:#fffc73;
 	}
+
 	.color_pink {
 		background:#e5399e;
 	}
+
 	.color_blue {
 		background:#ccf;
 	}
@@ -190,4 +208,29 @@
 		background:#aef26d;
 	}
 
+	.right {
+		float: left;
+		width: auto;
+		height: auto;
+		margin: o auto;
+	}
 
+	.left {
+		float: left;
+	}
+
+	.center {
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.box {
+		width: 20px;
+		height: 20px;
+		float: left;
+		border-radius: 20px;
+	}
+
+	header .handle{
+		width: 100%;
+	}

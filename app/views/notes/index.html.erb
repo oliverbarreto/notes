@@ -18,14 +18,14 @@
 <ul id="notes" data-update-url="<%= sort_notes_url %>">
 <% for note in @notes %>
   <%= content_tag_for(:li, note) do %>
-    <div  class="note_class color_<%= note.color.downcase %>">
+    <div class="note_class color_<%= note.color.downcase %>">
       <header>
-        <span class="handle">
-          <%= link_to 'x', note,  :confirm => 'Are you sure?', 
-                                  :method => :delete %> 
-        </span>
-<!--         <span class="handle">[move]</span>
- -->      
+          <div class="handle center">
+            <div> 
+              <%= link_to 'x', note,  :confirm => 'Are you sure?', 
+                                      :method => :delete %> 
+            </div>
+          </div>              
       </header>
 
       <a href="<%= edit_note_path(note) %>">
