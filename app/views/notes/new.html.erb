@@ -17,23 +17,37 @@
 
 	<ul id="notes">
 		<li>
-			<div  class="note_class color_<%= @note.color.downcase %> single_note">
-			<p>
-				<%= f.label :color %>
-				<%= f.text_field :color, :placeholder => "yellow", autofocus:"true" %>
-			</p>
-			<p>
-				<%= f.label :title %>
-				<%= f.text_field :title, :placeholder => "the note's title goes here" %>
-			</p>
-			<p>
-				<%= f.label :text %>
-				<%= f.text_area :text, :placeholder => "your note goes here" %>
-			</p>
-			<hr />
-			<p>
-				<%= f.submit "Add Note", class:"btn btn-large btn-success" %>
-			</p>
+			<div class="note_class color_<%= @note.color.downcase %> single_note">
+		      	<header>
+		      		<div class="handle center">
+		      			<div class="box color_pink"></div>
+		      			<div class="box color_green"></div>
+						<div class="box color_blue"></div>
+		      			<div class="box color_yellow"></div>
+		      			<div>	
+				        	<%= link_to 'x', @note,  :confirm => 'Are you sure?', :method => :delete %> 
+						</div>
+		      		</div>		        	
+		      	</header>
+				<section>
+					<p>
+						<%= f.label :color %>
+						<%= f.text_field :color, :placeholder => "yellow", autofocus:"true" %>
+					</p>
+					<p>
+						<%= f.label :title %>
+						<%= f.text_field :title, :placeholder => "the note's title goes here" %>
+					</p>
+					<p>
+						<%= f.label :text %>
+						<%= f.text_area :text, :placeholder => "your note goes here" %>
+					</p>
+					<hr />
+					<p>
+						<%= f.submit "Add Note", class:"btn btn-large btn-success" %>
+					</p>
+				</section>
+			</div>
 		</li>			
 	</ul>
 <% end %>
